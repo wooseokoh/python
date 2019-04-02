@@ -24,8 +24,8 @@ while True:
             stock[0] -= 1
             cola = 1000
             money = money - cola
-            print("코카콜라는 %d입니다." %cola)
-            print("잔돈은 %d입니다."%money)
+            print("코카콜라는 %d입니다. 잔돈은 %d입니다." % (cola, money))
+            print("남은재고는 %d개입니다."% stock[0])
             
     elif set == 2:
         if stock[1] == 0:
@@ -37,8 +37,8 @@ while True:
                 stock[1] -= 1
                 poka = 1500
                 money = money - poka
-                print("포카리는 %d입니다."%poka)
-                print("잔돈은 %d입니다."%money)
+                print("포카리는 %d입니다. 잔돈은 %d입니다." % (poka, money))
+                print("남은재고는 %d개입니다."% stock[1])
             
     elif set == 3:
         if stock[2] == 0:
@@ -50,8 +50,8 @@ while True:
                 stock[2] -= 1
                 sprite = 1300
                 money = money - sprite
-                print("스프라이트는 %d입니다."%sprite)
-                print("잔돈은 %d입니다."%money)
+                print("스프라이트는 %d입니다. 잔돈은 %d입니다." % (sprite, money))
+                print("남은재고는 %d개입니다."% stock[2])
             
     elif set == 4:
         if stock[3] == 0:
@@ -63,8 +63,8 @@ while True:
                 stock[3] -= 1
                 rice = 1200
                 money = money - rice 
-                print("식혜는 %d입니다."%rice)
-                print("잔돈은 %d입니다."%money)
+                print("식혜는 %d입니다. 잔돈은 %d입니다." % (rice, money))
+                print("남은재고는 %d개입니다."% stock[3])
         
     elif set == 5:
         if stock[4] == 0:
@@ -76,7 +76,7 @@ while True:
                 stock[4] -= 1
                 orange = 1100
                 money = money - orange
-                print("쌕쌕는 %d입니다."%orange)
-                print("잔돈은 %d입니다."%money)
+                print("쌕쌕는 %d입니다. 잔돈은 %d입니다." % (orange, money))
+                print("남은재고는 %d개입니다."% stock[4])
     else:
         print("다시입력해주세요.")
