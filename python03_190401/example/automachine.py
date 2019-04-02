@@ -8,7 +8,7 @@ stock = [5,5,5,5,5]
 while True:
 
     if money == 0 or money < 1000:
-        print("다음에 또 이용해 주세요")
+        print("다음에 또 이용해 주세요. 잔돈은 %d입니다." % money)
         break
 
     set = int(input("메뉴를 고르세요 :"))
