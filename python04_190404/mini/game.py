@@ -8,7 +8,7 @@ while True:
         print("게임을 종료합니다.")
         break
     
-    com = random.randint(1,3)
+    com = random.randint(0,2)
 
     if user < com:
         user = user + 3
