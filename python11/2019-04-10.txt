@@ -1,0 +1,37 @@
+python.org 
+3.6.8 executable installer path(v)
+choose from list : 3.6
+
+pip install pymysql
+pip install pyqt5
+
+데이터베이스 테이블 생성 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
