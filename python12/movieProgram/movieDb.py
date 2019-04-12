@@ -34,7 +34,7 @@ def db_update(id,title,content,director,img):
     print("2. 연결정보 -> 통로 만들기 성공...")
     print(cur)
     
-    sql = sql = "update movie set title= " + title + ", content = " + content + ", director = "  + director + " where id = " + id
+    sql = sql = "update movie set title= '" + title + "', content = '" + content + "', director = '"  + director + "', img = '"  + img + "' where id = '" + id + "'"
     cur.execute(sql)
     print("3. sql문 만들어서 -> 전송 성공 ...")
     con.commit()
