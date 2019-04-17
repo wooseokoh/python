@@ -81,12 +81,12 @@ def db_select_id(name,personalNum):
     sql =  "select * from member where name = '"+ name + "' and personalNum = '" + personalNum + "'"
           
     cur.execute(sql)
-    
+
     record = cur.fetchone()
     
-    print(record)
+#     print(record)
 
-    print("검색된 id : ", record[0])
+#     print("검색된 id : ", record[0])
 #     print("검색된 pw : ", record[1])
 #     print("검색된 name : ", record[2])
 #     print("검색된 personalNum : ", record[3])
@@ -140,5 +140,4 @@ def db_select_pw(id):
     print("4. db 연결해제")
     
     return record
-
 
