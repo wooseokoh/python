@@ -4,7 +4,7 @@ from tkinter import messagebox
 
 id_input, pw_input, pw_re_input, name_input, personalNum_input, addr_input, email_input, num_input = None,None,None,None,None,None,None,None
 data,data1,record = None,None,None
-    
+
 def member_insert():
     
     id = id_input.get()
@@ -14,11 +14,11 @@ def member_insert():
     addr = addr_input.get()
     email = email_input.get()
     num = num_input.get()
-    db_insert(id,pw,name,personalNum,addr,email,num)\
+    db_insert(id,pw,name,personalNum,addr,email,num)
     
+
 def duplCheck():
     
-    for x in id: 
         if id_input == id:
             messagebox.showinfo("Error", "아이디를 다시 입력해주세요")
         else:
@@ -80,10 +80,16 @@ def member_select_id():
     global data,record
     
     print("정보검색시작")
-    id = data.get() and data1.get()
-    record = db_select_id(id)
-    select_result_id(record)
-    
+    try:
+        name = data.get()
+        personalNum = data1.get()
+        record = db_select_id(name,personalNum)
+        select_result_id(record)
+    except:
+        messagebox.showinfo("Error", "아이디와 주민번호를 다시 입력해주세요")
+
+
+         
 def select_infor_id():
     
     global data,data1
@@ -93,15 +99,15 @@ def select_infor_id():
     w.geometry("380x500")
     w.title("아이디")
 
-    intro = Label(w, text="이름을 입력하세요. :", font=("궁서", 10), width = 30)
-    intro1 = Label(w, text="주민번호를 입력하세요. :", font=("궁서", 10), width = 30)
+    name = Label(w, text="이름을 입력하세요. :", font=("궁서", 10), width = 30)
+    personalNum = Label(w, text="주민번호를 입력하세요. :", font=("궁서", 10), width = 30)
     data = Entry(w, font=("궁서", 10), width = 10)
     data1 = Entry(w, font=("궁서", 10), width = 10)
     start = Button(w, text="회원정보 검색", command = member_select_id)
     
-    intro.pack()
+    name.pack()
     data.pack()
-    intro1.pack()
+    personalNum.pack()
     data1.pack()
     start.pack()
 
@@ -118,12 +124,10 @@ def select_result_id(record):
 
     id = Label(w, text = "검색된 아이디", font=("굴림",30))
     
-    id_input = Label(w, text=record[0], font=("궁서", 30))
+    id_input = Label(w, text = record[0], font=("궁서", 30))
 
- 
     id.pack()
     id_input.pack()
-
 
     w.mainloop()
 
@@ -167,15 +171,10 @@ def select_result_pw(record):
 
     pw = Label(w, text = "검색된 패스워드", font=("굴림",30))
 
-    pw_input = Label(w, text=record[1], font=("궁서", 30))
+    pw_input = Label(w, text = record[1], font=("궁서", 30))
 
     pw.pack()
     pw_input.pack()
 
     w.mainloop()
-    
-
-
-
-    
-    
+   
