@@ -38,7 +38,3 @@ if __name__ == '__main__':
     serchpw.place(x = 300, y= 200)
     
     w.mainloop()
-    
-
-
-
