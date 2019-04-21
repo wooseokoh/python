@@ -38,9 +38,9 @@ def get_naver_token():
     driver.implicitly_wait(3)
     driver.get('https://nid.naver.com/nidlogin.login')
 
-    id = 'w_wv'  #ID  직접 입력
+    id = ''  #ID  직접 입력
 
-    pw = 'tkdtjr123' #비번은 직접 입력
+    pw = '' #비번은 직접 입력
 
     driver.execute_script("document.getElementsByName('id')[0].value=\'" + id + "\'")
     time.sleep(1)
