@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>추가</title>
+</head>
+<body bgcolor="#cef97a">
+	<body>
+	<form action="db.py" method="post">
+	<table width="500">
+		<tr align="center">
+			<td width='200' bgcolor="orange">이름</td>
+			<td bgcolor="blue">
+					<input type="text" name="이름" size="30">
+			</td>
+		</tr>
+		<tr align="center">
+			<td width='200' bgcolor="orange">연락처</td>
+			<td bgcolor="blue">
+					<input type="text" name="연락처" size="30">
+			</td>
+		</tr>
+		<tr align="center">
+			<td width='200' bgcolor="orange">성별</td>
+			<td bgcolor="blue">
+					<input type="radio" gender="성별" size="30">남
+					<input type="radio" gender="성별" size="30">여
+			</td>
+		</tr>
+		<tr align="center">
+				<td width="200" bgcolor="#7adaf9">분야:</td>
+				<td bgcolor="green">
+					<input type="checkbox" name="hobby" size="30">노래
+					<input type="checkbox" name="hobby" size="30">연기
+					<input type="checkbox" name="hobby" size="30">작곡
+				</td>
+			</td>
+		<tr align="center">
+			<td colspan="2">
+					<input type="submit" value="추가" size="30">
+			</td>
+	</table>
+	</form>
+	</body>
+</html>
