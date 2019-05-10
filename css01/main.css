@@ -1,0 +1,6 @@
+/*CSS의 사용위치 외부스타일*/
+@charset "EUC-KR";
+/* 선택자 + 속성 정의 */
+h1 {
+		color : blue;
+	}

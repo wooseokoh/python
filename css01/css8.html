@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+#total {
+	width: 1500px;
+	height: 2000px; background-color : pink;
+	/* 	background-image: url(flower.png); */
+	font-size: 15px;
+	background-color: pink;
+}
+
+#top {
+	width: 800px;
+	padding-left: 200px;
+	height: 100px;
+	background: pink;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+#top li {
+	width: 100px;
+	height: 50px;
+	list-style: none;
+	float: left;
+	padding-left: 15px;
+	padding-top: 30px;
+	box-shadow: 10px 5px 30px silver;
+}
+
+#top li:first-child {
+	border-radius: 10px 0px 0px 10px;
+	/* 	background-color: yellow; */
+}
+
+#top li:last-child {
+	border-radius: 0px 10px 10px 0px;
+}
+
+#top li:nth-child(2n+1) {
+	background-color: red;
+}
+
+#top li:nth-child(2n) {
+	background-color: green;
+}
+
+#content {
+	display: inline;
+	padding-left: 10px; width : 200px;
+	height: 200px;
+	width: 200px;
+}
+
+#top2 {
+	top: 5px;
+	right: 5px;
+	position: fixed; font : 궁서 20px bold;
+	padding-left: 20px;
+	width: 150px;
+	height: 100px;
+	background-color: black;
+	color: white;
+	border-top: 5px solid aqua;
+	border-bottom: 10px double;
+	border-radius: 100px 10px;
+	box-shadow: 10px 10px yellow;
+	font: 궁서 20px bold;
+}
+
+#top3 {
+	bottom: 5px;
+	left: 50px;
+	position: fixed;
+	font: 굴림 20px bold;
+	padding-left: 20px;
+	width: 500px;
+	height: 100px;
+	background-color: white;
+	color: black;
+	box-shadow: 10px 10px yellow;
+}
+
+li {
+	background-color: gold;
+}
+
+a:visited {
+	background-color: blue;
+	font-size: 20px;
+	opacity: 0.5;
+}
+</style>
+</head>
+<body>
+	<div id="total">
+		<div id="top">
+			<ul>
+				<li><a href="css8.html">회사소개</a></li>
+				<li><a href="css9.html">회사제품</a></li>
+				<li><a href="css10.html">게시판</a></li>
+				<li><a href="css11.html">회사연락처</a></li>
+			</ul>
+		</div>
+		<div id="top2">
+			<ul>
+				<li><a href="css8.html">회사소개</a></li>
+				<li><a href="css9.html">회사제품</a></li>
+				<li><a href="css10.html">게시판</a></li>
+				<li><a href="css11.html">회사연락처</a></li>
+			</ul>
+		</div>
+		<div id="top3">
+			<ul>
+				<li><a href="css8.html">회사소개</a></li>
+				<li><a href="css9.html">회사제품</a></li>
+				<li><a href="css10.html">게시판</a></li>
+				<li><a href="css11.html">회사연락처</a></li>
+			</ul>
+		</div>
+		<div id="content" width="190" heiht="200">
+			<video controls>
+				<source src="mov_bbb.mp4">
+			</video>
+			<video controls>
+				<source src="mov_bbb.mp4">
+			</video>
+			<video controls>
+				<source src="mov_bbb.mp4">
+			</video>
+		</div>
+		<div id="bottom">
+			<ul>
+				<li>점심 식사 제공됩니다.</li>
+				<li>숙식 제공합니다</li>
+				<li>보너스가 지급됩니다.</li>
+			</ul>
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>

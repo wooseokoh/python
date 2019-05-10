@@ -1,0 +1,27 @@
+브라우저에 보여줄 정적페이지를 만들 때
+데이터 : HTML
+스타일 : CSS
+
+브라우저에 보여줄 동적페이지를 만들 때
+동적처리: 자바 스크립트, 제이쿼리
+
+- CSS 사용위치 
+
+CSS1.html
+CSS2.html
+main.css
+CSS3.html
+
+- CSS 기본선택자,가상선택자
+
+CSS4.html
+CSS5.html
+
+- CSS DOM
+
+CSS6.html
+
+- CSS border
+
+CSS7.html
+CSS7.html

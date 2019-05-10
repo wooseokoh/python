@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div h2{
+			color: red;
+		}
+/* 		h2{
+			color: green;
+		} */
+		h2 {
+			background-color: pink;
+		}
+		div > h2> tel {
+			color: green;
+		}
+		div tel{
+			background-color: silver;
+		}
+		li, h2{
+			font-size: 50px;
+		}
+	</style>
+</head>
+	<body>
+	<div>
+		<tel>010-1234-1234</tel>
+		<h2>나는 부엌에 있는 재료들</h2>
+			<tel>010-1234-4567</tel>
+		<ul>
+			<li>감자</li>
+			<li>고구마</li>
+			<li>양파</li>
+			<li>대파</li>
+		</ul>
+		
+	</div>
+	<h2>나는 부엌밖에 있는 재료들</h2>
+	
+	</body>
+</html>
+<!-- DOM구조
+BODY - DIV  - H2
+            - UL -LI
+                 -LI
+                 -LI
+                 -LI
+     - H2
+ -->
