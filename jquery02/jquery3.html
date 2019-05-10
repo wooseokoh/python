@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* 선택자 */
+		$("h1").text("나로 바뀌어요.!!!");
+		$("h1").css("background-color", "pink");
+		//감자를 가지고 와서 고구마 자리에 넣어보세요.
+		$("li:eq(1)").text($("li:eq(0)").text());
+		$("li:eq(0)").text("우유").css("color", "skyblue");
+		$("li:eq(2)").text("초콜릿").css("color", "brown");
+
+		var car = $("img").attr("src");
+		console.log(car);
+		$("img").attr("src","dog.PNG");
+		$("img").attr("title","나는 빨간 자동차");
+		var imsi = $("[href]").text();
+		console.log(imsi);
+		var imsi2 = $("a[href = 'abc.html']").text();
+		console.log(imsi2);
+	});
+</script>
+</head>
+<body>
+	<a href="http://www.naver.com">자주 사용하는 포탈</a>
+	<img src="car.png" title="나는 검정색 자동차"><br>
+	<br>
+	<h1>우리집 냉장고</h1>
+	<ul>
+		<li>감자</li>
+		<li>고구마</li>
+		<li>양파</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		$("#button1").click(function() {
+			alert("버튼 1을 클릭하셨군요.");
+		});
+		$("#me").click(function() {
+			console.log($(this).val())
+		});
+		$("#button1").mouseover(function() {
+			console.log("환영합니다")
+		});
+		$("#button1").mouseout(function() {
+			console.log("안녕하세요")
+		});
+		$("#you").keydown(function() {
+			alert("키를 누르셨군요");
+		});
+		$("#you").keyup(function() {
+			alert("키를 누르셨던 것을 ");
+		});
+
+	});
+</script>
+</head>
+<body>
+	<h1>음식화면</h1>
+	<form action="jquerytest3.html" method="get">
+		<button id="button1">나를 눌러요</button>
+		<button id="button2">나도 눌러요</button>
+		<input id="me" value=포커스..>
+		<input id="you" placeholder="키를 눌렀는지 확인하는 자리">
+
+	</form>
+</body>
+</html>

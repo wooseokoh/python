@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#button").click(function() { //call-back 함수 (무명함수): 이벤트를 기다렸다가 바로 실행됨
+			var id = $("#id").val();
+			var pw = $("#pw").val();
+ 			if(id == "root" && pw == "1234"){
+				alert("로그인되었습니다.");
+			}else {
+				alert("아이디와 비밀번호를 다시입력해주세요");
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>회원가입화면</h1>
+	<form action="member.py" method="get">
+		회원ID: <input id="id" type="text" name="id"><br>
+		회원PW: <input id="pw" type="text" name="pw"><br>
+		<input id="button" pw="button" type="submit" value="회원가입완료">
+	</form>
+</body>
+</html>

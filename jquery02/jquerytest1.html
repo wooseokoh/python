@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* 선택자 */
+		
+		$("a").attr("title", "나는 주소야..."); //attr추가
+/* 		$("img").removeAttr("src"); */
+		$("img[src='dog2.PNG']").attr("width",100);
+		$("img[src^='car']").attr("width", 100);
+		$("img[src$='car']").attr("width", 100);
+	});
+</script>
+</head>
+<body>
+	<img alt="좋아하는 강아지" src="dog2.PNG"><br>
+	<a href="=jquery1.jsp">제이쿼리 1로</a>
+	<h3>오늘은 제이쿼리 첫날</h3>
+	<img alt="me" src="dog.PNG">
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p></p>
+	<p></p>
+</body>
+</html>

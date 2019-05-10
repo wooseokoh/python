@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	var gfood = ['apple','banana','melon'];
+	var hfood = ['orange','tomato','watermelon']
+	var countup = 0;
+	var countdown = 0;
+	
+	$(function() {
+		$("#button").click(function() {
+		document.write("좋은음식" + "<br>" + gfood);
+		});
+		$("#button1").click(function() {
+		document.write("나쁜음식" + "<br>" + hfood);
+		});
+		$("#button2").click(function() {
+			countup += 1;
+			alert("카운트값" + countup);
+		});
+		$("#button3").click(function() {
+			countdown -= 1;
+			alert("카운트값" + countdown);
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>음식화면</h1>
+	<form action="jquerytest3.html" method="get">
+		<input id="button"type="submit" value="좋은음식">
+		<input id="button1"type="submit" value="나쁜음식">
+		<input id="button2" value="카운트업">
+		<input id="button3" value="카운트다운">
+	</form>
+</body>
+</html>

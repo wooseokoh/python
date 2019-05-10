@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+
+var list = ["1111"]
+$(function() {
+	$("#temp").keyup(function() {
+		var temp = $("#temp").val();
+		if(temp < 20) {
+			$("div:eq(0)").text("추움");
+		}else{
+			$("div:eq(0)").text("더움");
+		}
+	});
+	$("#pw").keyup(function() {
+		var pw = $("#pw").val();
+		for (var i = 0; i < 50; i++) {
+			if(pw == list){
+				$("div:eq(1)").text("정답");
+			}else{
+				$("div:eq(1)").text("틀림");
+			}
+		}
+
+	});
+	
+});
+
+</script>
+</head>
+<body>
+	오늘 온도 입력
+	<input type="text" id="temp"><br>
+	<div></div><br>
+	비밀 번호 입력
+	<input type="text" id="pw"><br>
+	<div></div><br>
+</body>
+</html>

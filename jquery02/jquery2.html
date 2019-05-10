@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	alert("나는 1번 출력");
+	$(function() { //body부분의 html dom tree가 만들어지고 나서 실행~!
+		var pText = $("p").text();
+		alert("p태그내의 컨텐츠는 :" + pText);		
+	});
+
+</script>
+</head>
+<body>
+	<p>나는 문단 내의 글자</p>
+	<script type="text/javascript">
+		alert("나는 2번 출력");
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		$("#id").keyup(function() {
+			var id = $(this).val();
+			if(id.length < 5) {
+				$("div").text("5글자보다 커야 합니다.");
+			}else{
+				$("div").text("5글자보다 큽니다.");
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+	<input type="text" id="id">
+	<div></div>
+</body>
+</html>
