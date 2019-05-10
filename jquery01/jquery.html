@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+/* 선택할때 $
+ * 기본형식
+ */
+$(function(){
+	var pText = $("p").text();
+	console.log(pText);
+	alert("9일인 " + pText); // 경고문
+	var result = confirm("정말로 목요일인가요?");
+	if(result == true){
+		alert("정말로 목요일이군요~!");
+	}else{
+		var today = prompt("그럼 무슨요일일까요?"); // 프롬프트창 띄우기
+		alert("그럼 오늘은 "+ today +"요일이군요~!");
+	}
+	$("h2").text(today);
+	var pText2 = $("h1").text();
+	console.log(pText2);
+	var result2 = confirm("나는 제목인가요?");
+	if(result == true){
+		alert(pText2);
+	}else{
+		alert("가지고 오지 않으셨군요");
+	}
+});
+
+</script>
+</head>
+<body>
+	<p>오늘은 목요일입니다</p>
+	<h1>나는 제목</h1>
+	<h2>나도 제목</h2>
+</body>
+</html>
