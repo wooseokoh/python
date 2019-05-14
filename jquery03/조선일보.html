@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+//속보 http://www.chosun.com/site/data/rss/rss.xml
+//https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.chosun.com%2Fsite%2Fdata%2Frss%2Frss.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss
+//스포츠 http://www.chosun.com/site/data/rss/sports.xml
+//https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.chosun.com%2Fsite%2Fdata%2Frss%2Fsports.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss
+//인포그래픽스 :http://inside.chosun.com/rss/rss.xml
+//https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Finside.chosun.com%2Frss%2Frss.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss
+	$(function() {
+		$("#b1").click(function () { //속보연결
+			$("#result").empty();
+			$.ajax({
+				url: "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.chosun.com%2Fsite%2Fdata%2Frss%2Frss.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+				dataType: "json",
+				data: { //서버로 전송되는 값.
+					url: "http://www.chosun.com/site/data/rss/rss.xml",
+					api_key: "nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+					count: 20
+				},
+				success: function (result) {
+	/* 				alert("조선일보 속보 사이트 연결 성공"); */
+					for(i = 0; i <20; i++){
+						var title = result.items[i].title;
+						var link = result.items[i].link;
+						var thumbnail = result.items[i].thumbnail;
+						$("#result").append("<a href=" + link +"><font color=red>" + title + "</font></a><br>")
+						$("#result").append("<img width=100 height=100 src=" + thumbnail +"><br><br>")
+					}
+				}
+			});
+		});
+		$("#b2").click(function () { //스포츠연결
+			$("#result").empty();
+			$.ajax({
+				url : "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Fwww.chosun.com%2Fsite%2Fdata%2Frss%2Fsports.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+				dataType: "json",
+				data: { //서버로 전송되는 값.
+					url: "http://www.chosun.com/site/data/rss/sports.xml",
+					api_key: "nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+					count: 20
+				},
+				success: function (result) {
+	/* 				alert("조선일보 속보 사이트 연결 성공"); */
+					for(i = 0; i <20; i++){
+						var title = result.items[i].title;
+						var link = result.items[i].link;
+						var thumbnail = result.items[i].thumbnail;
+						$("#result").append("<a href=" + link +"><font color=red>" + title + "</font></a><br>")
+						$("#result").append("<img width=100 height=100 src=" + thumbnail +"><br><br>")
+					}
+				}
+			});
+		});
+		$("#b3").click(function () { //인포그래픽스연결
+			$("#result").empty();
+			$.ajax({
+				url : "https://api.rss2json.com/v1/api.json?rss_url=http%3A%2F%2Finside.chosun.com%2Frss%2Frss.xml&api_key=nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+				dataType: "json",
+				data: { //서버로 전송되는 값.
+					url: "http://inside.chosun.com/rss/rss.xml",
+					api_key: "nlrsqtpaiyea8yueolairclkburbur5elcw5ymss",
+					count: 20
+				},
+				success: function (result) {
+	/* 				alert("조선일보 속보 사이트 연결 성공"); */
+					for(i = 0; i <20; i++){
+						var title = result.items[i].title;
+						var link = result.items[i].link;
+						var thumbnail = result.items[i].thumbnail;
+						$("#result").append("<a href=" + link +"><font color=red>" + title + "</font></a><br>")
+						$("#result").append("<img width=100 height=100 src=" + thumbnail +"><br><br>")
+					}
+				}
+			});
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<button type="button" id="b1">속보</button>
+	<button type="button" id="b2">스포츠</button>
+	<button type="button" id="b3">인포그래픽스</button>
+	<div id="result"></div>
+	
+</body>
+</html>

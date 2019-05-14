@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//외부 사이트와 통신.
+		$("#btn").on("click", function(){
+			$.ajax({
+				url: "rank.xml",
+				dataType: "xml",
+				success: function(result) {
+/* 					alert("xml이 있는 사이트 연결 성공..!"); */
+					var list = $(result).find("rank");
+					if(list.length > 0){
+						$("#txt1").text("success");
+						$(list).each(function(){
+							var id = $(this).find("name").text();
+							var tel = $(this).find("tel").text();
+							$("#txt1").append(id + "");		
+							$("#txt2").append(tel + "");
+							$("#txt3").append(id + " " + tel + " ");
+						});
+					}
+				}
+			});
+		});
+	});
+	
+</script>
+</head>
+<body>
+	<button type="button" id="btn">나를 눌러요.</button>
+	<h1 id="txt1"></h1>
+	<h1 id="txt2"></h1>
+	<h1 id="txt3"></h1>
+</body>
+</html>
