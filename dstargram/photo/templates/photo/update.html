@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} - Update {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-5"><br><br></div>
+        <div class="col-md-8 panel panel-default">
+            <form action="" method="post" enctype="multipart/form-data">
+                {{form.as_p}}
+                {% csrf_token %}
+                <p class="text-right">
+                <input type="submit" class="btn btn-primary" value="Update">
+                </p>
+            </form>
+        </div>
+    <div class="col-md-2"><br><br></div>
+</div>
+{% endblock %}

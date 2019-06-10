@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--  아래 반응형 웹 크기에 따라 화면이 맞춰짐  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--  부트스트랩  -->
+    <link rel="stylesheet"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+     crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+     crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+     crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <title>Dstagram {% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="container">
+
+    <!-- 상단 메뉴 -->
+    <header class="header clearfix">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">Dstagram</a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="/" class="active nav-link ">Home</a>
+                </li>
+                <!--     로그인확인     -->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                 <a href="#" class="nav-link">Welcome, {{user.get_username}}</a>
+                </li>
+                <li class="nav-item">
+                 <a href="{% url 'photo:photo_upload' %}" class="nav-link">Upload</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="{% url 'account_logout' %}">로그아웃</a>
+                </li>
+                {% else %}
+                <li>
+                    <a class="nav-link" href="{% url 'account_login' %}">로그인</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 우리가 넣고 싶은 내용 -->
+    {% block content %}
+
+
+    {% endblock %}
+
+    <!-- 하단 메뉴 -->
+    <footer class="footer">
+        <p>2019. Django</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} - Detail {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-2"><br><br></div>
+    <div class="col-md-2 panel-default"></div>
+        <p><img src="{{object.photo.url}}" style="width:100%"></p>
+            <button type="button" class="btn btn-xs bin-info">
+                {{object.author.username}}
+            </button>
+
+            <p>{{object.text|linebreaksbr}}</p>
+            <a href="{% url 'photo:photo_delete' pk=object.id%}" class="btn btn-outline-danger btn-m float-right">
+            DELETE
+                </a>
+            <a href="{% url 'photo:photo_update' pk=object.id%}" class="btn btn-outline-success btn-m float-right">
+            UPDATE
+                </a>
+        </div>
+                    <!--  댓글위치  -->
+        <div class="row">
+            <div class="col-md-8 panel panel-default">
+                {% load disqus_tags %}
+                {% disqus_show_comments %}
+            </div>
+        </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock %}
