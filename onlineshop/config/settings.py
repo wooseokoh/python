@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=sw8w(et##x+i3eq%2izfd@mz%q(*tr2x7v9w@gsm^anfmv_#u'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -136,8 +136,8 @@ STATIC_URL = '/static/'
 
 # AWS set
 
-AWS_ACCESS_KEY_ID = 'AKIAYQOLLEMMNPRVCB7O' # IAM 엑세스 키 아이디
-AWS_SECRET_ACCESS_KEY = 'prqEK/s+XyDUmwbajz7XC1x4+q9+DmUxGEZtRASf' # IAM 비밀 엑세스 키
+AWS_ACCESS_KEY_ID = '' # IAM 엑세스 키 아이디
+AWS_SECRET_ACCESS_KEY = '' # IAM 비밀 엑세스 키
 AWS_REGION = 'Asia Pacific (Seoul)'
 AWS_STORAGE_BUCKET_NAME = 'django-onlineshops' # S3 버킷 아이디
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME)
